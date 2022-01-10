@@ -47,13 +47,8 @@ class _MyCarsState extends State<HomeScreen> {
     return Padding(
 
       padding:const EdgeInsets.all(20.0),
-      child: Center(
-
-        child: Column(
-
-
+      child: Column(
           children: <Widget>[
-
             SelectFormField(
                 type: SelectFormFieldType.dialog,
                 labelText: "City",
@@ -115,7 +110,7 @@ class _MyCarsState extends State<HomeScreen> {
                         children:  [
                           Wrap(
                             children: [
-                              Icon(Icons.monetization_on_outlined),
+                             const Icon(Icons.monetization_on_outlined),
                               Text("250 SAR / Day",
                             style: TextStyle(
                               fontSize: 18,
@@ -154,7 +149,7 @@ class _MyCarsState extends State<HomeScreen> {
 
           ],
         ),
-      ),
+
     );
 
   }
