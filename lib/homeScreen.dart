@@ -3,8 +3,7 @@ import 'package:select_form_field/select_form_field.dart';
 
 
 class HomeScreen extends StatefulWidget {
-
-
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
   State<HomeScreen> createState() => _MyCarsState();
@@ -16,26 +15,17 @@ class _MyCarsState extends State<HomeScreen> {
     {
       'value': 'Jubail',
       'label': 'Jubail',
-
     },
     {
       'value': 'Dammam',
       'label': 'Dammam',
-
-      //  'textStyle': TextStyle(color: Colors.red),
     },
     {
       'value': 'Khobar',
       'label': 'Khobar',
-      //  'enable': false,
-
     },
   ];
 
-  //_MyCarsState( this.itemss );
-
-
-   //String _initialValue;
    String _valueChanged = '';
    String _valueToValidate = '';
    String _valueSaved = '';
@@ -45,14 +35,12 @@ class _MyCarsState extends State<HomeScreen> {
   Widget build(BuildContext context) {
 
     return Padding(
-
       padding:const EdgeInsets.all(20.0),
       child: Column(
           children: <Widget>[
             SelectFormField(
                 type: SelectFormFieldType.dialog,
                 labelText: "City",
-                // icon:Icon(Icons.location_city),
                 dialogTitle: 'City',
                 dialogCancelBtn: 'CANCEL',
                 enableSearch: true,
@@ -109,23 +97,26 @@ class _MyCarsState extends State<HomeScreen> {
 
                         children:  [
                           Wrap(
-                            children: [
-                             const Icon(Icons.monetization_on_outlined),
-                              Text("250 SAR / Day",
+                            children:const [
+                              Icon(Icons.monetization_on_outlined),
+                              SizedBox(width: 10,),
+                              Text("250 SAR/Day",
                             style: TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.bold,
-                             // color: Colors.amberAccent
+                              letterSpacing: 0.7,
                             ),
                             ),]
                           ),
-                          SizedBox(height: 10,),
+                         const SizedBox(height: 10,),
                           Wrap(
-                            children:[
+                            children:const [
                               Icon(Icons.directions_car),
+                              SizedBox(width: 10,),
                               Text("Toyota Corolla 2019",
                               style: TextStyle(
-                                fontSize: 16,
+                                fontSize: 18,
+                                letterSpacing: 1.0,
                               ),
                             ),
                             ]
